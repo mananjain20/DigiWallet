@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Digital Wallet Simulation — A modern fintech wallet app for managing balance, top-ups, and payments.">
+    <title>DigiWallet — Digital Wallet Simulation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand">
+            <span class="logo-icon">◈</span>
+            <span class="logo-text">DigiWallet</span>
+        </div>
+        <div class="user-name" id="user-name">Welcome!</div>
+    </nav>
+
+    <main class="main-container">
+        <section class="login-screen" id="login">
+           
+            <div class="login-card">
+                <div class="login-icon">◈</div>
+                <h1 class="title" > Welcome  <span class="grad">DigiWallet</span></h1>
+                <p class="subtitle">Your simple student wallet</p>
+                <div class="features">
+                    <div class="tag"><span class="dot dot-green"></span>Add Money</div>
+                    <div class="tag"><span class="dot dot-blue"></span>Pay Bills</div>
+                    <div class="tag"><span class="dot dot-orange"></span>History</div>
+                </div>
+                <form id="start-form" class="login-form">
+                    <label for="name-in" class="lab">Enter your name</label>
+                    <input type="text" id="name-in" class="in" placeholder="e.g. Manan Jain" required
+                        autocomplete="off">
+                    <button type="submit" class="btn btn-main">Create Wallet <span>→</span></button>
+                </form>
+            </div>
+        </section>
+
+        <section class="wallet-screen hidden" id="wallet">
+            <div id="modal" class="modal-overlay hidden">
+                <div class="modal-bg"></div>
+                <div class="modal-content">
+                    <div id="ripple" class="ripple-ring"></div>
+                    <div class="icon-box" id="icon-box">
+                        <span id="symbol" class="sym">✔</span>
+                    </div>
+                    <p class="modal-amt" id="modal-amt"></p>
+                    <p class="modal-status" id="modal-status"></p>
+                </div>
+            </div>
+
+            <div class="bal-card" id="bal-card">
+                    <p class="lab">Available Balance</p>
+                    <h2 class="bal" id="bal">₹0.00</h2>
+                    <p class="own" id="owner-name">—</p>
+            </div>
+
+            <div class="grid">
+                <div class="card" id="topup-box">
+                    <div class="head">
+                        <span class="icon top-icon">↑</span>
+                        <h3 class="title">Top Up</h3>
+                    </div>
+                    <p class="desc">Add money to wallet</p>
+                    <form id="topup-form" class="form">
+                        <div class="row">
+                            <span class="pre">₹</span>
+                            <input type="number" id="topup-in" class="in in-pre" placeholder="Amount" min="1"
+                                step="0.01" required>
+                        </div>
+                        <button type="submit" class="btn btn-top">+ Add Cash</button>
+                    </form>
+                </div>
+                <div class="card" id="pay-box">
+                    <div class="head">
+                        <span class="icon pay-icon">↓</span>
+                        <h3 class="title">Pay</h3>
+                    </div>
+                    <p class="desc">Send money from wallet</p>
+                    <form id="pay-form" class="form">
+                        <div class="row">
+                            <span>₹</span>
+                            <input type="number" id="pay-in" class="in in-pre" placeholder="Amount">
+                
+                        </div>
+                        <button type="submit" class="btn btn-pay">→ Send Money</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="toast hidden" id="msg-box">
+                <span class="msg-icon" id="msg-icon"></span>
+                <span class="msg-text" id="msg-text"></span>
+            </div>
+
+            <div class="history-box">
+                <div class="history-head">
+                    <h3 class="title">Wallet History</h3>
+                    <span class="count" id="count">0 transactions</span>
+                </div>
+
+                <div class="empty" id="none">
+                    <div class="empty-icon">📋</div>
+                    <p class="empty-text">No history found</p>
+                    <p class="empty-sub">Top up to see your history here!</p>
+                </div>
+
+                <ul class="list hidden" id="history"></ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>DigiWallet by Manan Jain</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
