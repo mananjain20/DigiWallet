@@ -16,7 +16,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    -webkit-font-smoothing: antialiased;
+    
 }
 
 .navbar {
@@ -31,7 +31,7 @@ body {
     z-index: 2;
     backdrop-filter: blur(16px);
     background: rgba(255, 255, 255, 0.85);
-    border-bottom: 2px solid transparent;
+    border-bottom: 4px solid transparent;
     border-image: linear-gradient(to right, #e2e4ea, #845ef7, #e2e4ea) 1;
 }
 
@@ -52,7 +52,7 @@ body {
     font-size: 20px;
     font-weight: 700;
     color: #1a1a2e;
-    letter-spacing: -0.5px;
+    letter-spacing: 0.5px; 
 }
 
 .user-name {
@@ -65,8 +65,7 @@ body {
     max-width: 720px;
     width: 100%;
     margin: 0 auto;
-    padding: 32px 20px 60px;
-    flex: 1;
+    padding: 32px 20px 60px 0px;
 }
 
 .login-screen {
@@ -74,17 +73,15 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 70vh;
-    position: relative;
-    overflow: hidden;
+    position: relative;  
 } 
-
 
 .login-card {
     background: #f5f2f2;
     border-radius: 26px;
     padding: 48px 40px;
     text-align: center;
-    box-shadow: 3px 8px 24px rgba(26, 26, 46, 0.07);
+    box-shadow: 0 10px 28px rgba(34, 34, 66, 0.07);
     width: 100%;
     max-width: 460px;
     position: relative;
@@ -104,15 +101,10 @@ body {
     font-weight: 800;
     color: #1a1a2e;
     margin-bottom: 8px;
-    letter-spacing: 0.5px;
-    opacity: 0;
+    letter-spacing: 0.5px; 
     animation: fadeUp 0.5s ease 0.35s forwards;
 }
 
-.grad {
-    background: linear-gradient( #5f3dc4, #845ef7);
-    background-clip: text;
-}
 
  .features {
     display: flex;
@@ -123,7 +115,7 @@ body {
 }
 
 .tag {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 6px;
     padding: 6px 14px;
@@ -134,10 +126,7 @@ body {
     border-radius: 20px;
     border: 1px solid #e2e4ea;
     cursor: pointer;
-    opacity: 0;
-    animation: fadeUp 0.4s ease forwards;
 }
-
 
 .dot {
     width: 6px;
@@ -170,7 +159,6 @@ body {
     font-weight: 600;
     color: #555770;
     margin-bottom: 8px;
-    text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
@@ -183,15 +171,7 @@ body {
     border-radius: 12px;
     background: #f0f2f5;
     color: #1a1a2e;
-    outline: none;
     transition: all 0.3s ease;
-}
-
-.in:focus {
-    border-color: #5f3dc4;
-    box-shadow: 0 0 0 4px rgba(95, 61, 196, 0.15), inset 0 2px 4px rgba(0, 0, 0, 0.02);
-    background: #fff;
-    transform: translateY(-1px);
 }
 
 .in::placeholder {
@@ -199,10 +179,9 @@ body {
 }
 
 .btn {
-    display: inline-flex;
+    display:flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
     padding: 14px 24px;
     font-size: 15px;
     font-weight: 600;
@@ -234,14 +213,14 @@ body {
     opacity: 1;
 }
 
-.btn-main {
+.btn {
     background: linear-gradient(135deg, #5f3dc4, #845ef7);
     color: #fff;
     width: 100%;
     margin-top: 20px;
 }
 
-.btn-main:hover {
+.btn:hover {
     box-shadow: 0 6px 24px rgba(95, 61, 196, 0.35);
     transform: translateY(-1px);
 }
@@ -262,11 +241,6 @@ body {
     margin-top: 12px;
 }
 
-.btn-top:hover {
-    box-shadow: 0 0 20px rgba(12, 166, 120, 0.2);
-    transform: translateY(-1px);
-}
-
 .btn-pay {
     background: linear-gradient(135deg, #e8590c, #fd7e14);
     color: #fff;
@@ -282,7 +256,7 @@ body {
 .modal-overlay {
     position: fixed;
     inset: 0;
-    z-index: 300;
+    z-index: 3;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -322,8 +296,8 @@ body {
 }
 
 .sym {
-    font-size: 50px;
-    color: #0ca678;
+    
+    color: #01130e;
     line-height: 1;
     display: block;
 }
@@ -981,22 +955,4 @@ body {
         font-size: 11px;
         padding: 5px 10px;
     }
-}
-
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f0f2f5;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #e2e4ea;
-    border-radius: 10px;
-    border: 2px solid #f0f2f5;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #9d9db7;
 }
