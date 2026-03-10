@@ -465,7 +465,7 @@ body {
     font-size: 14px;
     font-weight: 500;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    z-index: 200;
+    z-index: 20;
     opacity: 0;
     pointer-events: none;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -704,7 +704,7 @@ body {
     }
 }
 
-@keyframes toastBounceIn {
+/* @keyframes toastBounceIn {
     0% {
         transform: translateX(-50%) translateY(30px) scale(0.95);
         opacity: 0;
@@ -719,7 +719,7 @@ body {
         transform: translateX(-50%) translateY(0) scale(1);
         opacity: 1;
     }
-}
+} */
 
 
 @keyframes balancePop {
@@ -764,43 +764,9 @@ body {
         transform: translateX(0);
     }
 }
-@keyframes floatParticle {
 
-    0%,
-    100% {
-        transform: translateY(0) translateX(0);
-        opacity: 0.12;
-    }
 
-    25% {
-        transform: translateY(-18px) translateX(8px);
-        opacity: 0.22;
-    }
-
-    50% {
-        transform: translateY(-8px) translateX(-6px);
-        opacity: 0.10;
-    }
-
-    75% {
-        transform: translateY(-24px) translateX(10px);
-        opacity: 0.20;
-    }
-}
-
-@keyframes floatOrb {
-
-    0%,
-    100% {
-        transform: translate(0, 0);
-    }
-
-    50% {
-        transform: translate(10px, -12px);
-    }
-}
-
-@keyframes gentlePulse {
+/* @keyframes gentlePulse {
 
     0%,
     100% {
@@ -813,7 +779,7 @@ body {
         opacity: 0.85;
     }
 }
-
+ */
 
 @keyframes gentleSpin {
     from {
@@ -857,7 +823,7 @@ body {
     }
 }
 
-@keyframes contentFadeOut {
+/* @keyframes contentFadeOut {
     from {
         opacity: 1;
         transform: scale(1);
@@ -879,7 +845,7 @@ body {
         transform: scale(2.2);
         opacity: 0;
     }
-}
+} */
 
 @keyframes iconScaleIn {
     0% {
